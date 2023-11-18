@@ -36,7 +36,12 @@ public class Registration extends AppCompatActivity {
         binding = ActivityRegistrationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+        binding.signin1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
 
             binding.signup.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -90,14 +95,9 @@ public class Registration extends AppCompatActivity {
             throw new RuntimeException(e);
         }
 
-
-
-
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, regurl, jsonObject, new Response.Listener<JSONObject>() {
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, regurl, jsonObject, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject jsonObject) {
-                    binding.thanks.setText("REGISTRATION SUCCESSFUL.");
-                    binding.thanks.setVisibility(View.VISIBLE);
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }
             }, new Response.ErrorListener() {
