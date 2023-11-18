@@ -70,11 +70,11 @@ public class Registration extends AppCompatActivity {
                 binding.thanks.setVisibility(View.VISIBLE);
                 return;
             }
-          /* if (!PwordValidator.isPwordValid(pword)) {
+           if (!PwordValidator.isPwordValid(pword)) {
                 binding.thanks.setText("Invalid password. Please check the requirements.");
                 binding.thanks.setVisibility(View.VISIBLE);
                 return;
-            }*/
+            }
 
             RequestQueue q = Volley.newRequestQueue(this);
 
