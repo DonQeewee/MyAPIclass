@@ -89,7 +89,6 @@ public class Registration extends AppCompatActivity {
             jsonObject.put("firstName", fname);
             jsonObject.put("lastName", lname);
             jsonObject.put("email", email);
-            jsonObject.put("role", "ADMIN");
             jsonObject.put("password", pword);
         } catch (Exception e) {
             throw new RuntimeException(e);
