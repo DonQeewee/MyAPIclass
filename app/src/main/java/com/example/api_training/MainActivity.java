@@ -39,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.resetPw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PwReset.class));
+            }
+        });
+
         binding.login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,13 +85,12 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             jsonObject.put("email", email);
-            jsonObject.put("role", "ADMIN");
             jsonObject.put("password", pword);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, jsonObject, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 Intent intent = new Intent(getApplicationContext(), Dashboard.class);

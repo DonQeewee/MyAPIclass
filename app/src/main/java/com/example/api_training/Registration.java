@@ -94,7 +94,7 @@ public class Registration extends AppCompatActivity {
             throw new RuntimeException(e);
         }
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, regurl, jsonObject, new Response.Listener<JSONObject>() {
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, regurl, jsonObject, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject jsonObject) {
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));

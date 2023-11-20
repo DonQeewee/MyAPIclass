@@ -53,6 +53,8 @@
         android:layout_marginTop="70dp"
         android:fontFamily="sans-serif-thin"
         android:hint="@string/password"
+        android:inputType="text"
+        android:password="true"
         android:textColorHint="@color/blue"
         android:background="@drawable/curvature2"
         android:paddingLeft="10dp"/>
@@ -105,16 +107,16 @@
         android:textSize="17sp" />
 
     <TextView
-    android:id="@+id/reset_pw"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignTop="@+id/reset"
-    android:layout_marginTop="20dp"
-    android:fontFamily="@font/amaranth"
-    android:text="@string/click_here"
-    android:textAlignment="center"
-    android:textColor="@color/red"
-    android:textSize="17sp" />
+        android:id="@+id/reset_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/reset"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/amaranth"
+        android:text="@string/click_here"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/rideon"
