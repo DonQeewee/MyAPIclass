@@ -26,7 +26,7 @@ public class Dashboard extends AppCompatActivity {
         Intent intent = getIntent();
         String output = intent.getStringExtra("welcome");
 
-       binding.welcome.setText((output));
+       binding.welcome.setText(output);
 
 
 
